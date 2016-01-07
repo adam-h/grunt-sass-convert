@@ -51,7 +51,7 @@ module.exports = function (grunt) {
           grunt.file.mkdir(dest + srcPath);
         }
 
-        var out = dest + srcPath + prefix + filename.replace(/\.(css|scss|sass)/, '.' + options.to);
+        var out = dest + srcPath + prefix + filename.replace(/\.(css|scss|sass)/g, '') + '.' + options.to;
         args.push(out);
 
         grunt.verbose.writeln('\nexecute the following command:');
